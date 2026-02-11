@@ -61,78 +61,148 @@
     </section>
 
     <section>
-      <h2>Common Questions and Answers</h2>
+      <h2>Lab Exam Practice (HTML Foundations)</h2>
+      <p>
+        These practice questions are within Lab 01 scope. They focus on semantic HTML,
+        navigation structure, accessibility basics, and tables.
+      </p>
 
-      <dl>
-        <dt>Q1: Why use semantic elements like header, nav, main, and footer?</dt>
-        <dd>
-          A1: They describe the structure of a page to browsers, screen readers,
-          and search engines, improving accessibility, navigation, and maintainability.
-        </dd>
+      <h3>Part A: Find Mistakes (Identify + Fix)</h3>
+      <p>
+        In the exam, you will (1) identify the mistake in one sentence and (2) write the corrected HTML.
+      </p>
 
-        <dt>Q2: What is the purpose of aria-label on a nav element?</dt>
-        <dd>
-          A2: It provides an accessible name so screen readers can distinguish
-          multiple navigation regions (e.g., “Primary navigation”).
-        </dd>
+      <table border="1">
+        <caption>Sample exam questions: fix common HTML structure and accessibility mistakes</caption>
+        <thead>
+          <tr>
+            <th scope="col">UI Element / Issue</th>
+            <th scope="col">Wrong HTML (with mistake)</th>
+            <th scope="col">Correct UI Element</th>
+            <th scope="col">Correct HTML</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Navigation menu has a link directly inside <code>ul</code> (missing <code>li</code>)</th>
+            <td>
+              <pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt;
+    &lt;li&gt;&lt;a href="cv.html"&gt;CV&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            </td>
+            <td>Navigation list where each link is inside a list item</td>
+            <td>
+              <pre><code>&lt;nav aria-label="Primary navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="cv.html"&gt;CV&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            </td>
+          </tr>
 
-        <dt>Q3: When should aria-current="page" be used?</dt>
-        <dd>
-          A3: Use it on the link that represents the current page so users of
-          assistive technology know where they are in the site.
-        </dd>
+          <tr>
+            <th scope="row">Form label is not associated with its control (<code>for</code> ≠ <code>id</code>)</th>
+            <td>
+              <pre><code>&lt;label for="msg"&gt;Message&lt;/label&gt;
+&lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;</code></pre>
+            </td>
+            <td>Label correctly connected to form control</td>
+            <td>
+              <pre><code>&lt;label for="message"&gt;Message&lt;/label&gt;
+&lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;</code></pre>
+            </td>
+          </tr>
 
-        <dt>Q4: What is the difference between alt text and a caption?</dt>
-        <dd>
-          A4: Alt text describes an image for users who cannot see it; a caption
-          provides visible context or explanation for all users.
-        </dd>
+          <tr>
+            <th scope="row">Heading hierarchy is incorrect (skips a level)</th>
+            <td>
+              <pre><code>&lt;h1&gt;Interaction Analysis&lt;/h1&gt;
+&lt;h3&gt;Norman vs GOMS&lt;/h3&gt;</code></pre>
+            </td>
+            <td>Headings follow proper hierarchy (no skipping levels)</td>
+            <td>
+              <pre><code>&lt;h1&gt;Interaction Analysis&lt;/h1&gt;
+&lt;h2&gt;Norman vs GOMS&lt;/h2&gt;</code></pre>
+            </td>
+          </tr>
 
-        <dt>Q5: Why are labels required for form inputs?</dt>
-        <dd>
-          A5: Labels ensure form controls are announced correctly by screen readers
-          and make the clickable area larger for better usability.
-        </dd>
+          <tr>
+            <th scope="row">Comparison table missing <code>caption</code> and header cells (<code>th</code>)</th>
+            <td>
+              <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;Model&lt;/td&gt;&lt;td&gt;Predicts&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;KLM&lt;/td&gt;&lt;td&gt;Time&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            </td>
+            <td>Accessible table with caption + headers + scope</td>
+            <td>
+              <pre><code>&lt;table&gt;
+  &lt;caption&gt;Models and what they predict&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Model&lt;/th&gt;
+      &lt;th scope="col"&gt;Predicts&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;KLM&lt;/th&gt;
+      &lt;td&gt;Execution time&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            </td>
+          </tr>
 
-        <dt>Q6: What is the correct way to associate a label with an input?</dt>
-        <dd>
-          A6: Use a label element with a for attribute that matches the input’s id.
-        </dd>
+          <tr>
+            <th scope="row"><code>aria-current</code> used incorrectly (more than one "current page")</th>
+            <td>
+              <pre><code>&lt;nav aria-label="Primary navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html" aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="cv.html" aria-current="page"&gt;CV&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            </td>
+            <td>Only the active page link is marked as current</td>
+            <td>
+              <pre><code>&lt;nav aria-label="Primary navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="cv.html" aria-current="page"&gt;CV&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-        <dt>Q7: What do thead and tbody provide in a table?</dt>
-        <dd>
-          A7: They group header and body rows to improve structure, readability,
-          and accessibility for assistive technologies.
-        </dd>
-
-        <dt>Q8: Why use th scope="col" and th scope="row"?</dt>
-        <dd>
-          A8: Scope tells screen readers which headers apply to each cell, making
-          complex tables easier to understand.
-        </dd>
-
-        <dt>Q9: What is the purpose of the main element?</dt>
-        <dd>
-          A9: It identifies the unique, central content of a page and helps users
-          skip repeated navigation.
-        </dd>
-
-        <dt>Q10: When should you avoid using div and span?</dt>
-        <dd>
-          A10: Avoid them when a semantic element exists, because semantic elements
-          provide meaning and improve accessibility.
-        </dd>
-      </dl>
-    </section>
-
-    <section>
-      <h2>Quick Checklist</h2>
+      <h3>Part B: True / False</h3>
       <ul>
-        <li>One <code>h1</code> per page with logical heading order.</li>
-        <li>Navigation uses <code>nav &gt; ul &gt; li &gt; a</code>.</li>
-        <li>Form inputs always have associated <code>label</code>.</li>
-        <li>Tables include <code>caption</code>, <code>thead</code>, <code>tbody</code>, and scoped headers.</li>
-        <li>Images include meaningful <code>alt</code> text.</li>
+        <li><strong>True:</strong> Every link inside <code>&lt;ul&gt;</code> must be placed inside an <code>&lt;li&gt;</code>.</li>
+        <li><strong>False:</strong> A page may have multiple <code>&lt;h1&gt;</code> headings to make text larger.</li>
+        <li><strong>True:</strong> <code>aria-current="page"</code> should be used on the active navigation item.</li>
+        <li><strong>False:</strong> A form is accessible even if it has no <code>&lt;label&gt;</code> elements.</li>
+        <li><strong>True:</strong> KLM predicts execution time for expert, error-free performance.</li>
+      </ul>
+
+      <h3>Part C: Short Answer</h3>
+      <ul>
+        <li>
+          A semantic element (like <code>nav</code>) describes the meaning and role of content,
+          while a generic element (like <code>div</code>) provides no meaning and is used only
+          when no semantic element fits.
+        </li>
+        <li>
+          KLM focuses on execution-level operators and assumes the method is already chosen,
+          so it does not model high-level planning, decision making, or interpretation.
+        </li>
       </ul>
     </section>
   </main>
