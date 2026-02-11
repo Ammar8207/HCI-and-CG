@@ -6,8 +6,36 @@
 
   <!-- Page title shown in browser tab and screen readers -->
   <title>Don Norman – Home</title>
+
+  <style>
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 16px;
+      color: #2a2a2a;
+      background-color: #f5f1e6;
+    }
+
+    header, nav, main, footer {
+      background-color: #ffffff;
+    }
+
+    h1, h2, h3 {
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: #1b3a57;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+
+    a {
+      color: #0b5fa5;
+    }
+  </style>
 </head>
 <body>
+
+  <a href="#main">Skip to main content</a>
 
   <!-- Page header: identifies the site and its purpose -->
   <header>
@@ -29,35 +57,95 @@
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
+      <li><a href="html-qa.html">HTML Q&amp;A</a></li>
 
     </ul>
   </nav>
 
   <!-- Main content landmark: unique content of this page -->
-  <main>
+  <main id="main">
     <section>
       <!-- Section heading establishes content hierarchy -->
       <h2>Biography</h2>
 
-      <!-- Informative image with alternative text for accessibility -->
-      <img src="norman.jpg" alt="Portrait of Don Norman">
+      <p>
+        This site introduces key Human–Computer Interaction ideas with a focus
+        on Don Norman’s design principles and the GOMS and KLM models. It serves
+        as a course hub for exploring usability, task analysis, and how people
+        interact with interfaces.
+      </p>
+
+      <figure>
+        <img src="norman.jpg" alt="Portrait of Don Norman">
+        <figcaption>Don Norman: pioneer of user-centered design.</figcaption>
+      </figure>
 
       <p>
         Don Norman is a pioneer in the field of Human–Computer Interaction,
         known for his work on user-centered design, usability, and cognitive
-        engineering.
+        engineering. His writing and research connect how people think with
+        how interfaces should behave, arguing that good design makes actions
+        discoverable, feedback clear, and errors easy to recover from.
       </p>
+
+      <p>
+        He has helped shape modern interaction design by framing products as
+        systems of goals, actions, and feedback. The concepts you will study in
+        this course—Norman’s Action Cycle, GOMS task structures, and KLM timing
+        operators—provide a shared vocabulary for analyzing how people perform
+        tasks and why interfaces succeed or fail.
+      </p>
+    </section>
+
+    <section>
+      <h2>Don Norman Quote</h2>
+      <blockquote>
+        <p>“Good design is actually a lot harder to notice than poor design.”</p>
+        <cite>— Don Norman</cite>
+      </blockquote>
+    </section>
+
+    <section>
+      <h2>Key Themes in This Site</h2>
+      <ul>
+        <li>Norman’s principles and the Human Action Cycle</li>
+        <li>GOMS task structure and expert performance modeling</li>
+        <li>KLM operators for predicting execution time</li>
+        <li>Semantic HTML and accessibility-first structure</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Explore the Course Hub</h2>
+
+      <article>
+        <h3>Interaction Analysis</h3>
+        <p>See a side-by-side mapping of Norman’s stages with GOMS concepts.</p>
+        <p><a href="analysis.html">Go to Interaction Analysis</a></p>
+      </article>
+
+      <article>
+        <h3>Norman, GOMS, and KLM</h3>
+        <p>Compare models and review KLM operators with worked examples.</p>
+        <p><a href="norman2klm.html">Go to Norman–GOMS–KLM</a></p>
+      </article>
+
+      <article>
+        <h3>HTML Exam Q&amp;A</h3>
+        <p>Review semantic HTML and accessibility fundamentals.</p>
+        <p><a href="html-qa.html">Go to HTML Q&amp;A</a></p>
+      </article>
     </section>
   </main>
 
   <!-- Footer contains meta or supplementary information -->
   <footer>
     <p>&copy; 2026 HCI–CG Course</p>
-  <p>
-    <a href="assignment01.html">Lab 01 Instructions</a> |
-    <a href="https://github.com/humeraaa/hci-cg-2026">Starter Code</a> |
-    <a href="https://humeraaa.github.io/hci-cg-2026/">Live Demo</a>
-  </p>
+    <p>
+      <a href="assignment01.html">Lab 01 Instructions</a> |
+      <a href="https://github.com/humeraaa/hci-cg-2026">Starter Code</a> |
+      <a href="https://humeraaa.github.io/hci-cg-2026/">Live Demo</a>
+    </p>
   </footer>
 
 </body>

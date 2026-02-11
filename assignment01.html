@@ -5,14 +5,43 @@
   <title>Lab Assignment 01 – Semantic HTML Foundations</title>
 
   <style>
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 16px;
+      color: #2a2a2a;
+      background-color: #f5f1e6;
+    }
+
+    header, nav, main, footer {
+      background-color: #ffffff;
+    }
+
+    h1, h2, h3 {
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: #1b3a57;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+
+    a {
+      color: #0b5fa5;
+    }
+
+    table {
+      background-color: #ffffff;
+    }
+
     /* Minimal styling allowed in Lab 01 (color + font only) */
-    body { font-family: Arial, sans-serif; }
-    .rule-box { background-color: #fff3cd; }
-    .note-box { background-color: #e7f3ff; }
-    .warning  { color: #7a1f1f; }
+    .rule-box { background-color: #f7e8c9; }
+    .note-box { background-color: #e6eef7; }
+    .warning  { color: #7a2a1f; }
   </style>
 </head>
 <body>
+
+  <a href="#main">Skip to main content</a>
 
   <header>
     <h1>Lab Practice &amp; Assignment 01</h1>
@@ -21,27 +50,6 @@
       (<strong>Dix et al., Human–Computer Interaction</strong>, Ch. 12, p. 437: KLM/GOMS operators; plus Ch. 9: evaluation techniques)
     </p>
   </header>
-
-<section class="note-box">
-  <h2>Official Starter Code &amp; Live Demo</h2>
-  <p>
-    <strong>Starter Code (GitHub Repository):</strong><br>
-    <a href="https://github.com/humeraaa/hci-cg-2026">
-      https://github.com/humeraaa/hci-cg-2026
-    </a>
-  </p>
-  <p>
-    <strong>Live Demo (GitHub Pages):</strong><br>
-    <a href="https://humeraaa.github.io/hci-cg-2026/">
-      https://humeraaa.github.io/hci-cg-2026/
-    </a>
-  </p>
-  <p>
-    <em>This page is the single source of truth for Lab &amp; Assignment 01.</em>
-  </p>
-</section>
-
-
   <nav aria-label="Primary navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -50,10 +58,30 @@
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
       <li><a href="assignment01.html" aria-current="page">Lab 01 Rules</a></li>
+      <li><a href="html-qa.html">HTML Q&amp;A</a></li>
     </ul>
   </nav>
 
-  <main>
+  <main id="main">
+
+    <section class="note-box">
+      <h2>Official Starter Code &amp; Live Demo</h2>
+      <p>
+        <strong>Starter Code (GitHub Repository):</strong><br>
+        <a href="https://github.com/humeraaa/hci-cg-2026">
+          https://github.com/humeraaa/hci-cg-2026
+        </a>
+      </p>
+      <p>
+        <strong>Live Demo (GitHub Pages):</strong><br>
+        <a href="https://humeraaa.github.io/hci-cg-2026/">
+          https://humeraaa.github.io/hci-cg-2026/
+        </a>
+      </p>
+      <p>
+        <em>This page is the single source of truth for Lab &amp; Assignment 01.</em>
+      </p>
+    </section>
 
     <section>
       <h2>Purpose</h2>

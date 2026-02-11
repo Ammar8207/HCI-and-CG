@@ -5,18 +5,47 @@
   <title>Norman vs. GOMS vs. KLM – Cognitive Models</title>
 
   <style>
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 16px;
+      color: #2a2a2a;
+      background-color: #f5f1e6;
+    }
+
+    header, nav, main, footer {
+      background-color: #ffffff;
+    }
+
+    h1, h2, h3 {
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: #1b3a57;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+
+    a {
+      color: #0b5fa5;
+    }
+
+    table {
+      background-color: #ffffff;
+    }
+
     /* Minimal styling allowed in Lab 01: color only */
-    .row-norman { background-color: #fff3cd; } /* warm amber */
-    .row-goms   { background-color: #e7f3ff; } /* light blue */
-    .row-klm    { background-color: #e9f7ef; } /* light green */
+    .row-norman { background-color: #f7e8c9; }
+    .row-goms   { background-color: #e6eef7; }
+    .row-klm    { background-color: #e6f2eb; }
 
     .key-takeaway {
-      background-color: #fff3cd;
-      padding: 0.5em;
+      background-color: #f7e8c9;
     }
   </style>
 </head>
 <body>
+
+  <a href="#main">Skip to main content</a>
 
   <!-- Page header -->
   <header>
@@ -33,12 +62,27 @@
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html" aria-current="page">Norman–GOMS–KLM</a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
+      <li><a href="html-qa.html">HTML Q&amp;A</a></li>
 
     </ul>
   </nav>
 
   <!-- Main content -->
-  <main>
+  <main id="main">
+
+    <section>
+      <h2>At a Glance</h2>
+      <p>
+        These models serve different purposes: Norman explains user intent and
+        feedback, GOMS structures expert procedures, and KLM predicts execution
+        time for low‑level actions.
+      </p>
+      <ul>
+        <li><strong>Norman:</strong> understand errors and feedback.</li>
+        <li><strong>GOMS:</strong> compare alternative task strategies.</li>
+        <li><strong>KLM:</strong> estimate how fast tasks can be completed.</li>
+      </ul>
+    </section>
 
     <!-- Comparison section -->
     <section>
@@ -81,6 +125,62 @@
           </tr>
         </tbody>
       </table>
+    </section>
+
+    <section>
+      <h2>GOMS Model (Goals, Operators, Methods, Selection Rules)</h2>
+
+      <p>
+        GOMS is a predictive framework that models how expert users complete tasks.
+        It breaks interaction into <strong>Goals</strong> (what the user wants),
+        <strong>Operators</strong> (primitive actions like clicks or keystrokes),
+        <strong>Methods</strong> (step-by-step procedures to achieve a goal), and
+        <strong>Selection Rules</strong> (criteria for choosing among methods).
+        By describing tasks in this structured way, GOMS estimates efficiency and
+        compares alternative designs without requiring user testing for every case.
+      </p>
+    </section>
+
+    <section>
+      <h2>Keystroke-Level Model (KLM)</h2>
+
+      <p>
+        KLM is a low-level instance of GOMS that predicts expert task time by
+        summing simple operators such as <strong>K</strong> (keystroke),
+        <strong>P</strong> (pointing), <strong>B</strong> (button press),
+        <strong>H</strong> (homing), <strong>M</strong> (mental preparation), and
+        <strong>R</strong> (system response). It focuses on the execution phase only,
+        assuming the user already knows what to do. Designers use KLM to compare
+        interfaces and estimate efficiency without running a full usability test.
+      </p>
+
+      <!-- Clarifies KLM scope per lab rules: expert, error-free performance only -->
+      <p>
+        KLM predicts execution time for <strong>expert, error-free performance</strong>
+        and does not model high-level planning or interpretation.
+      </p>
+    </section>
+
+    <section>
+      <h2>When to Use Each Model</h2>
+      <dl>
+        <dt>Norman’s Action Cycle</dt>
+        <dd>Early design reviews, error analysis, and feedback improvements.</dd>
+        <dt>GOMS</dt>
+        <dd>Comparing expert methods and identifying efficiency bottlenecks.</dd>
+        <dt>KLM</dt>
+        <dd>Estimating task time for routine, error‑free interaction.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Who Paid Problem (Comparative Cognitive Example)</h2>
+      <!-- Short example highlighting limits of GOMS/KLM for high-level reasoning -->
+      <p>
+        The “Who Paid?” problem involves reasoning about shared costs and fairness.
+        GOMS and KLM can model the input steps, but they do not capture the
+        high-level reasoning needed to decide who owes what.
+      </p>
     </section>
 
     <!-- KLM operators -->

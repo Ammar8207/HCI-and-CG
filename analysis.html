@@ -8,13 +8,43 @@
   <title>Interaction Analysis – Norman vs. GOMS</title>
 
   <style>
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 16px;
+      color: #2a2a2a;
+      background-color: #f5f1e6;
+    }
+
+    header, nav, main, footer {
+      background-color: #ffffff;
+    }
+
+    h1, h2, h3 {
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: #1b3a57;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+
+    a {
+      color: #0b5fa5;
+    }
+
+    table {
+      background-color: #ffffff;
+    }
+
     /* Minimal styling (Lab 01 allowed): highlight rows where Norman and GOMS directly correspond */
     .norman-goms-match {
-      background-color: #fff3cd; /* warm, subtle amber */
+      background-color: #f7e8c9;
     }
   </style>
 </head>
 <body>
+
+  <a href="#main">Skip to main content</a>
 
   <!-- Page header: identifies topic and context -->
   <header>
@@ -33,11 +63,26 @@
       <li><a href="analysis.html" aria-current="page">Interaction Analysis</a></li>
       <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
+      <li><a href="html-qa.html">HTML Q&amp;A</a></li>
     </ul>
   </nav>
 
   <!-- Main landmark: unique content of this page -->
-  <main>
+  <main id="main">
+
+    <section>
+      <h2>Overview</h2>
+      <p>
+        This analysis compares how Norman’s Action Cycle and GOMS explain the
+        same task: enabling Wi‑Fi on a smartphone. The goal is to see where
+        the models align and where they deliberately differ.
+      </p>
+      <ul>
+        <li><strong>Norman:</strong> explains intention, execution, and evaluation.</li>
+        <li><strong>GOMS:</strong> structures expert tasks into goals and methods.</li>
+        <li><strong>KLM:</strong> estimates execution time for low‑level actions.</li>
+      </ul>
+    </section>
 
     <section>
       <h2>Norman vs. GOMS Comparison Table</h2>
@@ -176,6 +221,57 @@
         </tbody>
       </table>
 
+    </section>
+
+    <section>
+      <h2>Norman’s Human Action Cycle</h2>
+
+      <p>
+        Norman’s Human Action Cycle describes how people turn intentions into actions
+        and then evaluate results. The cycle begins with <strong>forming a goal</strong>
+        and <strong>planning</strong> what to do, followed by <strong>specifying</strong>
+        and <strong>executing</strong> the action. After acting, users <strong>perceive</strong>
+        system feedback, <strong>interpret</strong> what it means, and <strong>evaluate</strong>
+        whether the goal was achieved. Good interfaces reduce the <em>Gulf of Execution</em>
+        (making actions easy to figure out) and the <em>Gulf of Evaluation</em>
+        (making feedback clear and meaningful).
+      </p>
+    </section>
+
+    <section>
+      <h2>Automatic Syringe (Action Cycle Example)</h2>
+      <!-- Example grounded in Norman’s Action Cycle and gulfs -->
+      <p>
+        In an automatic syringe, the user’s goal is to deliver the correct dose.
+        The Gulf of Execution appears if the controls do not make the next safe
+        action obvious. The Gulf of Evaluation appears if feedback does not
+        clearly confirm dose completion or errors.
+      </p>
+    </section>
+
+    <section>
+      <h2>Key Terms</h2>
+      <dl>
+        <dt>Gulf of Execution</dt>
+        <dd>The gap between a user’s goal and the actions available in the interface.</dd>
+        <dt>Gulf of Evaluation</dt>
+        <dd>The gap between system feedback and the user’s ability to interpret it.</dd>
+        <dt>Method (GOMS)</dt>
+        <dd>A procedure that accomplishes a goal using a sequence of operators.</dd>
+        <dt>Operator (GOMS/KLM)</dt>
+        <dd>A basic action such as a keystroke, tap, or pointing movement.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Study Tip</h2>
+      <details>
+        <summary>How to compare models quickly</summary>
+        <p>
+          Ask whether the model explains <em>thinking and feedback</em> (Norman),
+          <em>task structure</em> (GOMS), or <em>execution time</em> (KLM).
+        </p>
+      </details>
     </section>
 
     <section>

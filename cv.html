@@ -5,9 +5,37 @@
   <meta charset="UTF-8">
 
   <!-- Page title shown in browser tab and announced by screen readers -->
-  <title>Don Norman – CV</title>
+  <title>Cv</title>
+
+  <style>
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 16px;
+      color: #2a2a2a;
+      background-color: #f5f1e6;
+    }
+
+    header, nav, main, footer {
+      background-color: #ffffff;
+    }
+
+    h1, h2, h3 {
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: #1b3a57;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+
+    a {
+      color: #0b5fa5;
+    }
+  </style>
 </head>
 <body>
+
+  <a href="#main">Skip to main content</a>
 
   <!-- Page header: identifies the page -->
   <header>
@@ -26,34 +54,47 @@
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
+      <li><a href="html-qa.html">HTML Q&amp;A</a></li>
 
     </ul>
   </nav>
 
   <!-- Main landmark: unique content of this page -->
-  <main>
+  <main id="main">
+    <section>
+      <h2>S.M.Ammar Hashmi</h2>
+      <!-- Adapted to keep a single h1 on the page -->
+      <p>
+        BS Computer Science student (5th Semester) with a strong interest in cybersecurity
+        and cloud-based security environments. Aspiring SOC Analyst focused on threat monitoring,
+        incident detection, and defensive security practices.
+      </p>
+    </section>
 
     <section>
       <h2>Education</h2>
+      <article>
+        <h3>Bachelor of Science in Computer Science (BSCS)</h3>
+        <p>Currently in 5th Semester</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
       <ul>
-        <li>PhD in Psychology – University of Pennsylvania</li>
-        <li>BSc in Engineering – MIT</li>
+        <li>Java</li>
+        <li>C++</li>
+        <li>Security Information and Event Management (SIEM) tools</li>
+        <li>Cloud fundamentals (cloud computing basics and security concepts)</li>
       </ul>
     </section>
 
     <section>
-      <h2>Work Experience</h2>
-
-      <!-- Each role is grouped as a separate content unit -->
-      <article>
-        <h3>Professor of Cognitive Science</h3>
-        <p>University of California, San Diego</p>
-      </article>
-
-      <article>
-        <h3>Director, Design Lab</h3>
-        <p>Founder of the Nielsen Norman Group</p>
-      </article>
+      <h2>Career Objective</h2>
+      <p>
+        To develop expertise in Security Operations Center (SOC) environments,
+        with a focus on monitoring, log analysis, and securing cloud-based systems.
+      </p>
     </section>
 
   </main>

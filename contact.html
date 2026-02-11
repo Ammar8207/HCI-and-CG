@@ -6,8 +6,36 @@
 
   <!-- Page title shown in browser tab and announced by screen readers -->
   <title>Don Norman – Contact</title>
+
+  <style>
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 16px;
+      color: #2a2a2a;
+      background-color: #f5f1e6;
+    }
+
+    header, nav, main, footer {
+      background-color: #ffffff;
+    }
+
+    h1, h2, h3 {
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: #1b3a57;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+
+    a {
+      color: #0b5fa5;
+    }
+  </style>
 </head>
 <body>
+
+  <a href="#main">Skip to main content</a>
 
   <!-- Page header: identifies the page purpose -->
   <header>
@@ -26,31 +54,47 @@
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
+      <li><a href="html-qa.html">HTML Q&amp;A</a></li>
 
     </ul>
   </nav>
 
   <!-- Main landmark: primary content of this page -->
-  <main>
-    <form action="#" method="post">
-      
-      <!-- Groups related form controls and provides context -->
-      <fieldset>
-        <legend>Send a Message</legend>
+  <main id="main">
 
-        <!-- Label explicitly associated with its input -->
-        <label for="subject">Subject</label><br>
-        <input type="text" id="subject" name="subject"><br><br>
+    
+    <section>
+      <h2>Send a Message</h2>
+      <form action="#" method="post">
+        <!-- Groups related form controls and provides context -->
+        <fieldset>
+          <legend>Message Form</legend>
 
-        <!-- Textarea with clear label for screen readers -->
-        <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+          <p>
+            <label for="full-name">Full Name</label><br>
+            <input type="text" id="full-name" name="full-name" autocomplete="name" required>
+          </p>
 
-        <!-- Submit button is keyboard accessible by default -->
-        <button type="submit">Send</button>
-      </fieldset>
+          <p>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </p>
 
-    </form>
+          <p>
+            <label for="subject">Subject</label><br>
+            <input type="text" id="subject" name="subject" required>
+          </p>
+
+          <p>
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="6" cols="32" required></textarea>
+          </p>
+
+          <!-- Submit button is keyboard accessible by default -->
+          <button type="submit">Send</button>
+        </fieldset>
+      </form>
+    </section>
   </main>
 
   <!-- Footer provides supplementary information -->

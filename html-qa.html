@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Q&amp;A – Semantic HTML &amp; Accessibility</title>
+
+  <style>
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 16px;
+      color: #2a2a2a;
+      background-color: #f5f1e6;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+
+    h1, h2, h3 {
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: #1b3a57;
+    }
+
+    a {
+      color: #0b5fa5;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main">Skip to main content</a>
+
+  <!-- Page header: identifies the page -->
+  <header>
+    <h1>HTML Exam Q&amp;A</h1>
+    <p>Semantic HTML and accessibility basics</p>
+  </header>
+
+  <!-- Primary navigation: consistent across all site pages -->
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="analysis.html">Interaction Analysis</a></li>
+      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+      <li><a href="assignment01.html">Lab 01 Rules</a></li>
+      <li><a href="html-qa.html" aria-current="page">HTML Q&amp;A</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main landmark: unique content of this page -->
+  <main id="main">
+    <section>
+      <h2>How to Use This Page</h2>
+      <p>
+        Read each question aloud and verify that your answers use correct
+        semantic elements and accessibility practices. These items mirror
+        common exam prompts.
+      </p>
+    </section>
+
+    <section>
+      <h2>Common Questions and Answers</h2>
+
+      <dl>
+        <dt>Q1: Why use semantic elements like header, nav, main, and footer?</dt>
+        <dd>
+          A1: They describe the structure of a page to browsers, screen readers,
+          and search engines, improving accessibility, navigation, and maintainability.
+        </dd>
+
+        <dt>Q2: What is the purpose of aria-label on a nav element?</dt>
+        <dd>
+          A2: It provides an accessible name so screen readers can distinguish
+          multiple navigation regions (e.g., “Primary navigation”).
+        </dd>
+
+        <dt>Q3: When should aria-current="page" be used?</dt>
+        <dd>
+          A3: Use it on the link that represents the current page so users of
+          assistive technology know where they are in the site.
+        </dd>
+
+        <dt>Q4: What is the difference between alt text and a caption?</dt>
+        <dd>
+          A4: Alt text describes an image for users who cannot see it; a caption
+          provides visible context or explanation for all users.
+        </dd>
+
+        <dt>Q5: Why are labels required for form inputs?</dt>
+        <dd>
+          A5: Labels ensure form controls are announced correctly by screen readers
+          and make the clickable area larger for better usability.
+        </dd>
+
+        <dt>Q6: What is the correct way to associate a label with an input?</dt>
+        <dd>
+          A6: Use a label element with a for attribute that matches the input’s id.
+        </dd>
+
+        <dt>Q7: What do thead and tbody provide in a table?</dt>
+        <dd>
+          A7: They group header and body rows to improve structure, readability,
+          and accessibility for assistive technologies.
+        </dd>
+
+        <dt>Q8: Why use th scope="col" and th scope="row"?</dt>
+        <dd>
+          A8: Scope tells screen readers which headers apply to each cell, making
+          complex tables easier to understand.
+        </dd>
+
+        <dt>Q9: What is the purpose of the main element?</dt>
+        <dd>
+          A9: It identifies the unique, central content of a page and helps users
+          skip repeated navigation.
+        </dd>
+
+        <dt>Q10: When should you avoid using div and span?</dt>
+        <dd>
+          A10: Avoid them when a semantic element exists, because semantic elements
+          provide meaning and improve accessibility.
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Quick Checklist</h2>
+      <ul>
+        <li>One <code>h1</code> per page with logical heading order.</li>
+        <li>Navigation uses <code>nav &gt; ul &gt; li &gt; a</code>.</li>
+        <li>Form inputs always have associated <code>label</code>.</li>
+        <li>Tables include <code>caption</code>, <code>thead</code>, <code>tbody</code>, and scoped headers.</li>
+        <li>Images include meaningful <code>alt</code> text.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer provides supplementary navigation -->
+  <footer>
+    <p><a href="index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>
